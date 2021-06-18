@@ -1,6 +1,6 @@
 import React from 'react';
 import {TextInput} from 'react-native';
-import {Dialog, Portal, Provider} from 'react-native-paper';
+import {Portal, Provider} from 'react-native-paper';
 
 const App = () => {
   const [val, setVal] = React.useState('');
@@ -8,9 +8,7 @@ const App = () => {
   return (
     <Provider>
       <Portal>
-        <Dialog visible={true}>
-          <TextInput value={val} onChangeText={setVal} />
-        </Dialog>
+          <TextInput style={{borderWidth: 2}} placeholder={"Test"} value={val} onChangeText={setVal} />
       </Portal>
     </Provider>
   );
